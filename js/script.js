@@ -75,7 +75,7 @@ let movies = [
 // Activity 2
 
 const showTitles = (num) => {
-	if (movies[0].rating > num || movies[(movies.length-1)].rating < num) {
+	if (movies[0].rating > num) {
 		console.log("No movies with that rating.")
 	}else {
 			console.log(`Movies with ${num} and above ratings`);
