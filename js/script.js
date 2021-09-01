@@ -25,9 +25,7 @@ let movies = [
 				displayTitleandGenre: function(){
 				console.log(`${this.title} is an ${this.genre} movie`)
 				},
-				displayRatingandTitle: function(){
-				console.log("the movie " + this.title + " has " + this.rating + " Stars")
-				},
+				
 				
 			},
 
@@ -39,9 +37,6 @@ let movies = [
 				
 				displayTitleandGenre: function(){
 				console.log(`${this.title} is an ${this.genre} movie`)
-				},
-				displayRatingandTitle: function(){
-				console.log("the movie " + this.title + " has " + this.rating + " Stars")
 				},
 				
 			},
@@ -55,9 +50,7 @@ let movies = [
 				displayTitleandGenre: function(){
 				console.log(`${this.title} is an ${this.genre} movie`)
 				},
-				displayRatingandTitle: function(){
-				console.log("the movie " + this.title + " has " + this.rating + " Stars")
-				},
+			
 				
 			},
 
@@ -70,9 +63,7 @@ let movies = [
 				displayTitleandGenre: function(){
 				console.log(`${this.title} is an ${this.genre}  movie`)
 				},
-				displayRatingandTitle: function(){
-				console.log(`the movie ${this.title} has ${this.rating} Stars`)
-				},
+				
 
 				
 			}
@@ -81,27 +72,22 @@ let movies = [
 
 ]
 
- const showTitles = num => {
-   const moviesToReturn = movies.map((m) => m).filter(m => m.rating > num)
- return moviesToReturn
-  }
- 
-const showTitle = (num) => {
-  let moviesToReturn  = [];
+// Activity 2
 
-  movies.forEach((movie) => {
-    if(movie.rating >= num) {
-      moviesToReturn.push(movie)
-    }
-    
-  })
-
-  return moviesToReturn
+const showTitles = (num) => {
+	if (movies[0].rating > num || movies[(movies.length-1)].rating < num) {
+		console.log("No movies with that rating.")
+	}else {
+			console.log(`Movies with ${num} and above ratings`);
+			for(i=0;i<movies.length;i++){
+			if (num <= movies[i].rating) {
+			console.log(`${movies[i].title} ${movies[i].rating} stars`);
+			}
+		}
+	}
 }
 
-showTitle(4).forEach((movie) => {
-   movie.displayRatingandTitle()
- })
+
 
 
 const showallmovies = () => {
