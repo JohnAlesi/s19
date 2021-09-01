@@ -33,7 +33,7 @@ let movies = [
 				title: "John Wick 3",
 				genre: "Action",
 				releasedDate: d = new Date(2019, 4, 9),
-				rating: 4,
+				rating: 8,
 				
 				displayTitleandGenre: function(){
 				console.log(`${this.title} is an ${this.genre} movie`)
